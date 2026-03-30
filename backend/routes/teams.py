@@ -18,14 +18,27 @@ def _serialize(doc: dict) -> dict:
 
 # ---------- schemas ----------
 
+class LeaderIn(BaseModel):
+    name: str = ""
+    is_direct_staff: bool = False
+
+
 class TeamIn(BaseModel):
     name: str
     description: str = ""
+    location: str = ""
+    leader: LeaderIn = LeaderIn()
+    employee_count: int | None = None
+    org_leader: str | None = None
 
 
 class TeamUpdate(BaseModel):
     name: str | None = None
     description: str | None = None
+    location: str | None = None
+    leader: LeaderIn | None = None
+    employee_count: int | None = None
+    org_leader: str | None = None
 
 
 # ---------- routes ----------
