@@ -1,0 +1,9 @@
+fastapi
+mangum
+pymongo
+python-jose[cryptography]
+bcrypt
+python-dotenv
+uvicorn[standard]
+pydantic
+python-multipart
