@@ -23,6 +23,7 @@ class MemberIn(BaseModel):
     email: str
     role: str = ""
     team_id: str | None = None
+    co_located: bool | None = None
 
 
 class MemberUpdate(BaseModel):
@@ -30,6 +31,7 @@ class MemberUpdate(BaseModel):
     email: str | None = None
     role: str | None = None
     team_id: str | None = None
+    co_located: bool | None = None
 
 
 # ---------- routes ----------
